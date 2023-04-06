@@ -1,12 +1,16 @@
 # Athlete-Training-Tracker-
 Check Point 3 - exercise your skills with structured data and use of inheritance.
-Part one the thinking : 
+
+Part 1: the thinking -> 
+----
 Consider a trainer who wants to keep a record of the times and distances her athletes train over the season.  Ultimately we'll work up to a triathlete trainer, whose athletes will be doing at least running, cycling, and swimming. They might be doing weights and other sorts of training too.
 
 What will be your object model for this system? You have one trainer, with multiple athletes. Each athlete can do multiple training runs, and they need to be distinct from each other. The minimum information required of a training run is what time it occurred, and how far it was. (A more realistic training run might also include other features such as particular goals, the route, time-splits and so on. Feel free to think about all of this in the model, but for convenience we will keep the implementation quite simple.)
 
 While the implementation you will have at the end of this two week practical will be able to simplistically track athletes for a triathlete trainer, consider how your design might facilitate (or hinder) further extension of the program to include all the "bells and whistles" of a comprehensive training program. Design for the future!
 
+My Answer: 
+---
 1) Trainer: The trainer is the top-level entity in the system. It has a name and a list of athletes.
 
 2) Athlete: An athlete is a person who the trainer trains. Each athlete has a name and a list of training sessions.
@@ -16,3 +20,11 @@ While the implementation you will have at the end of this two week practical wil
 4) Distance: The distance entity represents the distance covered during a training session. It has a value and a unit of measurement (e.g., miles, kilometers, etc.).
 
 5) TrainingType: The training type entity represents the type of training session, such as running, cycling, swimming, weight training, etc. It has a name and possibly other attributes, such as a route or time splits.
+
+
+
+Part 2: Coding and code reveiw ->
+---
+Having thought about the model and sketched it,you are given a simple program with the ability to let you add and look up records over the years.  Dates should be entered using DD MM YYYY format. Times in hh:mm:ss format.
+
+The  program makes use of Java library classes such as ArrayList and processes the contents of a list using a ListIterator. Extensions must also use iterators and parameterised types.  
