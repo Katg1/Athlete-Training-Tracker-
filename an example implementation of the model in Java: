@@ -1,0 +1,100 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Trainer {
+    private String name;
+    private List<Athlete> athletes;
+
+    public Trainer(String name) {
+        this.name = name;
+        this.athletes = new ArrayList<>();
+    }
+
+    public void addAthlete(Athlete athlete) {
+        athletes.add(athlete);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Athlete> getAthletes() {
+        return athletes;
+    }
+}
+
+public class Athlete {
+    private String name;
+    private List<TrainingSession> trainingSessions;
+
+    public Athlete(String name) {
+        this.name = name;
+        this.trainingSessions = new ArrayList<>();
+    }
+
+    public void addTrainingSession(TrainingSession session) {
+        trainingSessions.add(session);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<TrainingSession> getTrainingSessions() {
+        return trainingSessions;
+    }
+}
+
+public class TrainingSession {
+    private DateTime dateTime;
+    private Distance distance;
+    private TrainingType trainingType;
+
+    public TrainingSession(DateTime dateTime, Distance distance, TrainingType trainingType) {
+        this.dateTime = dateTime;
+        this.distance = distance;
+        this.trainingType = trainingType;
+    }
+
+    public DateTime getDateTime() {
+        return dateTime;
+    }
+
+    public Distance getDistance() {
+        return distance;
+    }
+
+    public TrainingType getTrainingType() {
+        return trainingType;
+    }
+}
+
+public class Distance {
+    private double value;
+    private String unit;
+
+    public Distance(double value, String unit) {
+        this.value = value;
+        this.unit = unit;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+}
+
+public class TrainingType {
+    private String name;
+
+    public TrainingType(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
