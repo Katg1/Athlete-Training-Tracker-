@@ -98,3 +98,20 @@ public class TrainingType {
         return name;
     }
 }
+
+
+
+
+
+
+
+   +-----------+       +-------------+       +------------------+
+   |  Trainer  |       |   Athlete   |       |  TrainingSession  |
+   +-----------+       +-------------+       +------------------+
+   |  - name   |       |  - name     |       |  - dateTime       |
+   |  - athletes|<>---->|  - training|<>---->|  - distance       |
+   +-----------+       |    sessions|       |  - trainingType   |
+                       +-------------+       +------------------+
+                                            |  +Distance         |
+                                            |  +TrainingType     |
+                                            +------------------+
